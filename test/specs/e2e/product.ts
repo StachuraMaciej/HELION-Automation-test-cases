@@ -6,6 +6,7 @@ import { searchProductURL } from "../../../lib/websites.ts";
 import { alertText, deletedMess } from "../../../lib/date.ts";
 import productPage from "../../pages/productPage.ts";
 import CartPage from "../../pages/CartPage.ts";
+import homePage from "../../pages/homePage";
 
 //import homePage from "../../pages/homePage";
 describe("E2E - Products", async () => {
@@ -59,5 +60,9 @@ describe("E2E - Products", async () => {
     await expect(await productPage.getDeletedAlertMess()).toContain(
       deletedMess
     );
+  });
+
+  it("Should back to homepage", async () => {
+    await homePage.openHomePage();
   });
 });
