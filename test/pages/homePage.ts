@@ -7,10 +7,6 @@ class homePage {
     await browser.url(homeURL);
     await expect(browser).toHaveUrl(homeURL);
   }
-
-  /*get field() {
-    return $("#productsSearch");
-  } ZMIENNE*/
 }
 
 export default new homePage();

@@ -45,4 +45,9 @@ describe("E2E search bar", async () => {
     await searchbarPage.clearSearchBtn();
     await expect(await searchbarPage.checkSearchBtn()).toContain("");
   });
+
+  it("Should type text and click search icon", async () => {
+    await searchbarPage.typeTextTwo();
+    await browser.pause(3000);
+  });
 });

@@ -21,6 +21,9 @@ class searchbarPage {
   get booksItem() {
     return $$("ul.list > li");
   }
+  get firstBookItem() {
+    return $("ul.list > li:nth-child(1) > a");
+  }
 
   //pobieranie elementu
   async barIsVisible() {
@@ -78,6 +81,19 @@ class searchbarPage {
     await check.waitForDisplayed();
     //pobierz i zwróc zawartość
     return await check.getValue();
+  }
+  async typeTextTwo() {
+    const input: WebdriverIO.Element = await this.input;
+    const icon: WebdriverIO.Element = await this.iconSearch;
+    await input.waitForDisplayed();
+    await input.setValue("Test2");
+    await icon.click();
+  }
+
+  async clickOnFirstBookItem() {
+    const item: WebdriverIO.Element = await this.firstBookItem;
+    await item.waitForDisplayed();
+    await item.click();
   }
 }
 

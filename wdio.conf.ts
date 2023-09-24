@@ -34,9 +34,9 @@ export const config: Options.Testrunner = {
   // Patterns to exclude.
 
   suites: {
-    debug: ["./test/specs/e2e/searchbar.ts"],
+    debug: ["./test/specs/e2e/product.ts"],
 
-    e2e: ["./test/specs/e2e/searchbar.ts"],
+    e2e: ["./test/specs/e2e/searchbar.ts", "./test/specs/e2e/product.ts"],
   },
   // Patterns to exclude.
   exclude: [
