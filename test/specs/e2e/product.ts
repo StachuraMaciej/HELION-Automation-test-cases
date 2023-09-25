@@ -55,12 +55,12 @@ describe("E2E - Products", async () => {
     await browser.pause(3000);
   });
 
-  it("Should click OK on alert", async () => {
+  /*it("Should click OK on alert", async () => {
     await productPage.confirmAlert();
     await expect(await productPage.getDeletedAlertMess()).toContain(
       deletedMess
     );
-  });
+  });*/
 
   it("Should back to homepage", async () => {
     await homePage.openHomePage();

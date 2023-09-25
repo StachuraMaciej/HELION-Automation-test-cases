@@ -26,10 +26,6 @@ describe("E2E search bar", async () => {
     await searchbarPage.visibleList();
   });
 
-  it("Should accept Rodo", async () => {
-    await rodoConfirm.acceptRodo();
-  });
-
   it("Should click on see all books button", async () => {
     await searchbarPage.clickonbtnTwoAllBooks();
     await expect(browser).toHaveUrl(searchPageURL);

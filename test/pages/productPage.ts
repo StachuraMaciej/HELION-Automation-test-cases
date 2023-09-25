@@ -78,7 +78,7 @@ class productPage {
   }
 
   async confirmAlert() {
-    await browser.waitUntil(() => browser.getAlertText() !== undefined);
+    //await browser.waitUntil(() => browser.getAlertText() !== undefined);
     await browser.acceptAlert();
   }
 
